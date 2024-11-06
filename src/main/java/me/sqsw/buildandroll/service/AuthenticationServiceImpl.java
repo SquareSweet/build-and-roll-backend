@@ -11,11 +11,14 @@ import me.sqsw.buildandroll.model.User;
 import me.sqsw.buildandroll.utils.JwtTokenUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -59,6 +62,12 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         String accessToken = tokenUtils.generateAccessToken(userDetails);
         String refreshToken = tokenUtils.generateRefreshToken(userDetails);
         return new AuthenticationResponse(accessToken, refreshToken);
+    }
+
+    public User getProfile(){
+        String userName = String.valueOf(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+        Optional<User> user = userService.getByUsername(userName);
+        return user.get();
     }
 
     @Override
