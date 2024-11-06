@@ -2,7 +2,9 @@ package me.sqsw.buildandroll.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.sqsw.buildandroll.contracts.RoomService;
+import me.sqsw.buildandroll.dto.UserDto;
 import me.sqsw.buildandroll.dto.request.room.CreateRoomRequest;
+import me.sqsw.buildandroll.dto.request.room.UpdateUsersDto;
 import me.sqsw.buildandroll.dto.request.room.UserJoinToRoomRequest;
 import me.sqsw.buildandroll.dto.response.RoomResponse;
 import me.sqsw.buildandroll.model.Room;
@@ -53,5 +55,11 @@ public class RoomController {
     public ResponseEntity<RoomResponse> getRoom(@PathVariable Long roomId) throws Exception {
         Room room = roomService.getById(roomId);
         return ResponseEntity.ok(new RoomResponse(room));
+    }
+
+    @PostMapping("/{roomId}/send_users")
+    public void sendAllUsersInRoom(@PathVariable Long roomId,
+                                   @RequestBody UpdateUsersDto users) throws Exception {
+        roomService.sendAllUsersInRoom(roomId, users);
     }
 }

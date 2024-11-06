@@ -3,6 +3,8 @@ package me.sqsw.buildandroll.service;
 import com.pusher.rest.Pusher;
 import lombok.RequiredArgsConstructor;
 import me.sqsw.buildandroll.contracts.RoomService;
+import me.sqsw.buildandroll.dto.UserDto;
+import me.sqsw.buildandroll.dto.request.room.UpdateUsersDto;
 import me.sqsw.buildandroll.dto.response.RoomResponse;
 import me.sqsw.buildandroll.dto.room.UserJoinToRoomDto;
 import me.sqsw.buildandroll.enums.RoomEvents;
@@ -60,6 +62,10 @@ public class RoomServiceImpl implements RoomService {
     public void addUserToRoom(Long userId, Long roomId) throws Exception {
         Optional<User> user = userService.getById(userId);
         user.ifPresent(value -> pusher.trigger("room_" + roomId.toString() + "_channel", RoomEvents.USER_JOINED.toString(), new UserJoinToRoomDto(value, roomId)));
+    }
+
+    public void sendAllUsersInRoom(Long roomId, UpdateUsersDto users) {
+        pusher.trigger("room_" + roomId.toString() + "_channel", RoomEvents.UPDATE_USERS.toString(), users);
     }
 
     public void removeUserFromRoom(Long userId, Long roomId) {
