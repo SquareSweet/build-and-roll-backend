@@ -1,4 +1,4 @@
-package me.sqsw.buildandroll.dto;
+package me.sqsw.buildandroll.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,8 +1,8 @@
 package me.sqsw.buildandroll.service;
 
-import me.sqsw.buildandroll.dto.AuthenticationRequest;
-import me.sqsw.buildandroll.dto.AuthenticationResponse;
-import me.sqsw.buildandroll.dto.RegistrationRequest;
+import me.sqsw.buildandroll.dto.request.AuthenticationRequest;
+import me.sqsw.buildandroll.dto.response.AuthenticationResponse;
+import me.sqsw.buildandroll.dto.request.RegistrationRequest;
 
 public interface AuthenticationService {
     AuthenticationResponse register(RegistrationRequest regRequest);

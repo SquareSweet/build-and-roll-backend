@@ -3,11 +3,10 @@ package me.sqsw.buildandroll.service;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.sqsw.buildandroll.dto.AuthenticationRequest;
-import me.sqsw.buildandroll.dto.AuthenticationResponse;
-import me.sqsw.buildandroll.dto.RegistrationRequest;
+import me.sqsw.buildandroll.dto.request.AuthenticationRequest;
+import me.sqsw.buildandroll.dto.response.AuthenticationResponse;
+import me.sqsw.buildandroll.dto.request.RegistrationRequest;
 import me.sqsw.buildandroll.exception.InvalidTokenException;
-import me.sqsw.buildandroll.model.Role;
 import me.sqsw.buildandroll.model.User;
 import me.sqsw.buildandroll.utils.JwtTokenUtils;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,8 +16,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Set;
 
 @Service
 @RequiredArgsConstructor

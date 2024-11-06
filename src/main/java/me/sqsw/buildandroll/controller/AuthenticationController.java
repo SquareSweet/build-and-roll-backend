@@ -1,9 +1,9 @@
 package me.sqsw.buildandroll.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.sqsw.buildandroll.dto.AuthenticationRequest;
-import me.sqsw.buildandroll.dto.AuthenticationResponse;
-import me.sqsw.buildandroll.dto.RegistrationRequest;
+import me.sqsw.buildandroll.dto.request.AuthenticationRequest;
+import me.sqsw.buildandroll.dto.response.AuthenticationResponse;
+import me.sqsw.buildandroll.dto.request.RegistrationRequest;
 import me.sqsw.buildandroll.dto.TokenRequest;
 import me.sqsw.buildandroll.service.AuthenticationService;
 import org.springframework.web.bind.annotation.PostMapping;
