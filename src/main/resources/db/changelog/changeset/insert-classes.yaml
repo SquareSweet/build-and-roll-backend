@@ -1,0 +1,203 @@
+databaseChangeLog:
+  - changeSet:
+      author: SquareSweet
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Bard
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Knowlege Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Life Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Light Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Nature Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Tempest Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Trickery Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (War Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Forge Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cleric (Grave Domain)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Arctic Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Coast Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Desert Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Forest Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Grassland Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Mountain Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Swamp Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Druid (Underdark Circle of the Land)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Paladin (Oath of Devotion)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Paladin (Oath of  Ancients)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Paladin (Oath of Vengeance)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Paladin (Oath of  Redemption)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Paladin (Oath of  Conquest)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Ranger (Horizon Walker)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Ranger (Gloom Stalker)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Ranger (Monster Slayer)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Sorcerer (Divine Soul)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Warlock (Archfey)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Warlock (Fiend)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Warlock (The Great Old One)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Warlock (The Hexblade)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Warlock (The Celestial)
+            tableName: classes
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Wizard
+            tableName: classes
+      id: insert-classes

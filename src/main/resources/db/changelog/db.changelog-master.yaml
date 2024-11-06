@@ -25,3 +25,5 @@ databaseChangeLog:
       file: db/changelog/changeset/insert-races.yaml
   - include:
       file: db/changelog/changeset/insert-spells.yaml
+  - include:
+      file: db/changelog/changeset/insert-classes.yaml
