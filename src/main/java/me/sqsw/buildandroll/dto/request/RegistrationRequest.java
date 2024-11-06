@@ -1,4 +1,4 @@
-package me.sqsw.buildandroll.dto;
+package me.sqsw.buildandroll.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;
