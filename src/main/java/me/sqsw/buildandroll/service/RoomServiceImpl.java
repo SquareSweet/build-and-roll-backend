@@ -33,10 +33,14 @@ public class RoomServiceImpl implements RoomService {
         return roomRepository.save(room);
     }
 
-    public List<Room> getAll() throws Exception {
+    public List<Room> getAllOwned() throws Exception {
         String userName = String.valueOf(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         Optional<User> user = userService.getByUsername(userName);
         return roomRepository.findByOwner(user.get());
+    }
+
+    public List<Room> getAll() throws Exception {
+        return (List<Room>) roomRepository.findAll();
     }
 
     @Override

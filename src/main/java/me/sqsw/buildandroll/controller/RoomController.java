@@ -33,8 +33,16 @@ public class RoomController {
         roomService.removeUserFromRoom(userJoinToRoomRequest.getUserId(), userJoinToRoomRequest.getRoomId());
     }
 
-    @GetMapping("/all")
+    @GetMapping("/all_owned")
     public List<RoomResponse> getRooms() throws Exception {
+        List<Room> rooms = roomService.getAllOwned();
+        return rooms.stream()
+                .map(RoomResponse::new)
+                .collect(Collectors.toList());
+    }
+
+    @GetMapping("/all")
+    public List<RoomResponse> getAllRooms() throws Exception {
         List<Room> rooms = roomService.getAll();
         return rooms.stream()
                 .map(RoomResponse::new)

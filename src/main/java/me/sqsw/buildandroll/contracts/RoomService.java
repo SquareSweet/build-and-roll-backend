@@ -11,7 +11,7 @@ public interface RoomService {
     Optional<Room> getByTitle(String title);
     void addUserToRoom(Long userId, Long roomId) throws Exception;
     void removeUserFromRoom(Long userId, Long roomId) throws Exception;
+    List<Room> getAllOwned() throws Exception;
     List<Room> getAll() throws Exception;
-
     Room getById(Long id);
 }

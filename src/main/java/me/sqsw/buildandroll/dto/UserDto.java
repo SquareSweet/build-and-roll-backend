@@ -10,9 +10,11 @@ import me.sqsw.buildandroll.model.User;
 @AllArgsConstructor
 public class UserDto {
 
+    private Long id;
     private String username;
     
     public UserDto(User user) {
+        this.id = user.getId();
         this.username = user.getUsername();
     }
 }
