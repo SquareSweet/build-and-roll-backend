@@ -20,7 +20,18 @@ public class WeaponServiceImpl implements WeaponService {
     }
 
     @Override
-    public List<Weapon> getByType(String type, Integer page, Integer pageSize) {
-        return repository.findAllByType(WeaponType.valueOf(type), PageRequest.of(page,pageSize));
+    public List<Weapon> getFiltered(String type, String name, Integer page, Integer pageSize) {
+        WeaponType weaponType = type == null ? null : WeaponType.valueOf(type);
+        String nameFilter = name == null ? null : "%" + name + "%";
+
+        if (weaponType == null && nameFilter == null) {
+            return repository.findBy(PageRequest.of(page,pageSize));
+        } else if (weaponType == null) {
+            return repository.findAllByNameLikeIgnoreCase(nameFilter, PageRequest.of(page,pageSize));
+        } else if (nameFilter == null) {
+            return repository.findAllByType(weaponType, PageRequest.of(page,pageSize));
+        } else {
+            return repository.findAllByNameLikeIgnoreCaseAndType(nameFilter, weaponType, PageRequest.of(page,pageSize));
+        }
     }
 }

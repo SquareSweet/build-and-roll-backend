@@ -20,9 +20,10 @@ public class WeaponsController {
     }
 
     @GetMapping()
-    public List<Weapon> getByType(@RequestParam String type,
+    public List<Weapon> getByType(@RequestParam(required = false) String type,
+                                  @RequestParam(required = false) String search,
                                   @RequestParam(defaultValue = "1") Integer page,
                                   @RequestParam(defaultValue = "10") Integer perPage) {
-        return weaponService.getByType(type, page - 1, perPage);
+        return weaponService.getFiltered(type, search, page - 1, perPage);
     }
 }
