@@ -27,3 +27,5 @@ databaseChangeLog:
       file: db/changelog/changeset/insert-spells.yaml
   - include:
       file: db/changelog/changeset/insert-classes.yaml
+  - include:
+      file: db/changelog/changeset/insert-classes-spells.yaml
