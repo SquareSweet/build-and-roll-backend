@@ -1,0 +1,461 @@
+databaseChangeLog:
+  - changeSet:
+      author: SquareSweet
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Barbed Dagger
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 gp", "Damage": "2d4", "Damagetype": "Piercing", "Weight": "1 lb", "Properties": ["Light", "Finesse", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Brandistock
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 gp", "Damage": "1d8", "Damagetype": "Piercing", "Weight": "4 lb", "Properties": ["Special", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Broken Sword
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 sp", "Damage": "1d4", "Damagetype": "Piercing", "Weight": "1 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Cestus
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 sp", "Damage": "1d4", "Damagetype": "Bludgeoning", "Weight": "0.5 lb", "Properties": ["Light", "Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Double Spear
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "1d6", "Damagetype": "Piercing", "Weight": "4 lb", "Properties": ["Versatile (1d8)", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Eye Sickle
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 gp", "Damage": "1d6", "Damagetype": "Piercing", "Weight": "4 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Falx
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "8 gp", "Damage": "1d6", "Damagetype": "Slashing", "Weight": "3 lb", "Properties": ["Versatile (1d8)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Fauchard
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 gp", "Damage": "1d6", "Damagetype": "Slashing", "Weight": "7 lb", "Properties": ["Heavy", "reach", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Flamberge
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "15 gp", "Damage": "1d8 + 1d2", "Damagetype": "Slashing + Ripping", "Weight": "6 lb", "Properties": ["Ripping", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Gavel
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 sp", "Damage": "1d4", "Damagetype": "Bludgeoning", "Weight": "0.5 lb", "Properties": ["Undersized"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Greatspear
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "25 gp", "Damage": "1d10", "Damagetype": "Piercing", "Weight": "8 lb", "Properties": ["Oversized", "Thrown (20/60)", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Iron Claws
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "1d4", "Damagetype": "Piercing", "Weight": "2 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Karambit
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "4 gp", "Damage": "1d4", "Damagetype": "Slashing", "Weight": "1 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Katar
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "1d4", "Damagetype": "Piercing", "Weight": "1 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Knife
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "2 sp", "Damage": "1d3", "Damagetype": "Slashing", "Weight": "0.25 lb", "Properties": ["Undersized", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Ko
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "1 gp", "Damage": "1d4", "Damagetype": "Piercing / bludgeoning", "Weight": "1 lb", "Properties": ["Light", "Finesse", "Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Kukri
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "6 gp", "Damage": "1d6", "Damagetype": "Slashing", "Weight": "2 lb", "Properties": ["Light", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Needle
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "2 sp", "Damage": "1d4", "Damagetype": "Piercing", "Weight": "0.25 lb", "Properties": ["Undersized", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Sap
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "1 gp", "Damage": "1d4", "Damagetype": "Bludgeoning", "Weight": "2 lb", "Properties": ["Light", "Finesse"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Scythe
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "2d4", "Damagetype": "Slashing", "Weight": "5 lb", "Properties": ["Heavy", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Spade
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "2 gp", "Damage": "1d4", "Damagetype": "Bludgeoning", "Weight": "4 lb", "Properties": ["Versatile"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Torch Mace
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "6 gp", "Damage": "1d4", "Damagetype": "Bludgeoning", "Weight": "2 lb", "Properties": ["Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Torch Staff
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "12 gp", "Damage": "2d4", "Damagetype": "Bludgeoning", "Weight": "7 lb", "Properties": ["Heavy", "Two-handed", "Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Zerka
+              - column:
+                  name: type
+                  value: Melee
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 sp", "Damage": "1d8", "Damagetype": "Piercing", "Weight": "3 lb", "Properties": ["Special", "Finesse", "Thrown (40/160)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Crossbow, light
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "25 gp", "Damage": "1d8", "Damagetype": "piercing", "Weight": "5 lb", "Properties": ["Ammunition (80/320)", "Loading", "Two-Handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Dart
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 cp", "Damage": "1d4", "Damagetype": "piercing", "Weight": "0.25 lb", "Properties": ["Finesse", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Shortbow
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "25 gp", "Damage": "1d6", "Damagetype": "piercing", "Weight": "2 lb", "Properties": ["Ammunition (80/320)", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Slingstaff
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "2 sp", "Damage": "1d6", "Damagetype": "bludgeoning", "Weight": "2 lb", "Properties": ["Ammunition (30/120)", "Two-handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Atlatl
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "1d6", "Damagetype": "piercing", "Weight": "1 lb", "Properties": ["Ammunition", "Range (50-100)", "Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Blowgun
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "10 gp", "Damage": "1", "Damagetype": "piercing", "Weight": "1 lb", "Properties": ["Ammunition", "Range (25/100)", "Loading"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Bolas
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "1 gp", "Damage": "1d4", "Damagetype": "bludgeoning", "Weight": "2 lb", "Properties": ["Special", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Boomerang
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "2 gp", "Damage": "1d4", "Damagetype": "bludgeoning", "Weight": "1 lb", "Properties": ["Special", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Chakram
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "5 gp", "Damage": "1d6", "Damagetype": "slashing", "Weight": "0.5 lb", "Properties": ["Finesse", "Thrown (20/60)"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Chatkcha
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "1 gp", "Damage": "1d6", "Damagetype": "slashing", "Weight": "2 lb", "Properties": ["Finesse", "Light", "Thrown (30/120)", "Special"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Crossbow, Hand
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "75 gp", "Damage": "1d6", "Damagetype": "piercing", "Weight": "3 lb", "Properties": ["Ammunition", "Range (30/120)", "Light", "Loading"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Crossbow, Repeating
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "250 gp", "Damage": "2d4", "Damagetype": "piercing", "Weight": "18 lb", "Properties": ["Ammunition", "Range (80/320)", "Heavy", "Two-Handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Longbow
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "50 gp", "Damage": "1d8", "Damagetype": "piercing", "Weight": "2 lb", "Properties": ["Ammunition", "Range (150/600)", "Heavy", "Two-Handed"]}'
+            tableName: weapons
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Throwing Hammer
+              - column:
+                  name: type
+                  value: Ranged
+              - column:
+                  name: properties
+                  value: '{"Cost": "15 gp", "Damage": "1d6", "Damagetype": "bludgeoning", "Weight": "4 lb", "Properties": ["Thrown (60/120)"]}'
+            tableName: weapons
+      id: insert-weapons

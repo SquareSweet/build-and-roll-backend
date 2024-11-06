@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-classes-spells-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: classes_spells
+            columns:
+              - column:
+                  name: class_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user_roles_users
+                    references: classes(id)
+              - column:
+                  name: spell_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user_roles_roles
+                    references: spells(id)
