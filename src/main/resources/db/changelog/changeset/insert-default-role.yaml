@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-default-role
+      author: SquareSweet
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: 'ROLE_USER'
