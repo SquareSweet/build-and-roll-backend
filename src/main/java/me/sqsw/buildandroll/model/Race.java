@@ -18,8 +18,7 @@ public class Race {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String race;
-    private String subrace;
+    private String name;
     @JdbcTypeCode(SqlTypes.JSON)
     private Map<String, Object> properties;
 }

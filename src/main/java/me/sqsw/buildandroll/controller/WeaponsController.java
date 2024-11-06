@@ -14,9 +14,8 @@ public class WeaponsController {
     private final WeaponService weaponService;
 
     @GetMapping("/all")
-    public List<Weapon> getAll(@RequestParam(defaultValue = "1") Integer page,
-                               @RequestParam(defaultValue = "10") Integer perPage) {
-        return weaponService.getAll(page - 1, perPage);
+    public List<Weapon> getAll() {
+        return weaponService.getAll();
     }
 
     @GetMapping()

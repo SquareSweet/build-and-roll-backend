@@ -15,8 +15,8 @@ public class WeaponServiceImpl implements WeaponService {
     private final WeaponRepository repository;
 
     @Override
-    public List<Weapon> getAll(Integer page, Integer pageSize) {
-        return repository.findBy(PageRequest.of(page,pageSize));
+    public List<Weapon> getAll() {
+        return repository.findAll();
     }
 
     @Override

@@ -8,6 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface WeaponRepository extends CrudRepository<Weapon, Integer> {
+    List<Weapon> findAll();
     List<Weapon> findBy(PageRequest pageRequest);
     List<Weapon> findAllByType(WeaponType type, PageRequest pageRequest);
     List<Weapon> findAllByNameLikeIgnoreCase(String name, PageRequest pageRequest);
