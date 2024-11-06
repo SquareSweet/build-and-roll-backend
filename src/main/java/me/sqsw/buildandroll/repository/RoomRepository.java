@@ -13,4 +13,6 @@ public interface RoomRepository extends CrudRepository<Room, Long> {
     Optional<Room> findByTitle(String title);
 
     List<Room> findByOwner(User user);
+
+    Optional<Room> getById(Long id);
 }

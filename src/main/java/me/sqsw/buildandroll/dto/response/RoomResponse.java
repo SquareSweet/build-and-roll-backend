@@ -12,6 +12,7 @@ import me.sqsw.buildandroll.model.User;
 @AllArgsConstructor
 public class RoomResponse {
 
+    private Long id;
     private String title;
 
     private UserDto owner;
@@ -19,6 +20,7 @@ public class RoomResponse {
     private String invitationLink;
 
     public RoomResponse(Room room) {
+        this.id = room.getId();
         this.title = room.getTitle();
         this.owner = new UserDto(room.getOwner());
         this.invitationLink = room.getInvitationLink();

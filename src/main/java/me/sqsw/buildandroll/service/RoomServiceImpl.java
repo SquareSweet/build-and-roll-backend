@@ -33,7 +33,7 @@ public class RoomServiceImpl implements RoomService {
         return roomRepository.save(room);
     }
 
-    public List<Room> get() throws Exception {
+    public List<Room> getAll() throws Exception {
         String userName = String.valueOf(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         Optional<User> user = userService.getByUsername(userName);
         return roomRepository.findByOwner(user.get());
@@ -44,13 +44,22 @@ public class RoomServiceImpl implements RoomService {
         return Optional.empty();
     }
 
+    public Room getById(Long id) {
+        Optional<Room> room = roomRepository.getById(id);
+        if(room.isPresent()){
+            return room.get();
+        }else{
+            throw new IllegalArgumentException("Room not found");
+        }
+    }
+
     public void addUserToRoom(Long userId, Long roomId) throws Exception {
         Optional<User> user = userService.getById(userId);
-        user.ifPresent(value -> pusher.trigger("casual-sparrow-784", RoomEvents.USER_JOINED.toString(), new UserJoinToRoomDto(value, roomId)));
+        user.ifPresent(value -> pusher.trigger("room_" + roomId.toString() + "_channel", RoomEvents.USER_JOINED.toString(), new UserJoinToRoomDto(value, roomId)));
     }
 
     public void removeUserFromRoom(Long userId, Long roomId) {
         Optional<User> user = userService.getById(userId);
-        user.ifPresent(value -> pusher.trigger("casual-sparrow-784", RoomEvents.USER_LEFT.toString(), new UserJoinToRoomDto(value, roomId)));
+        user.ifPresent(value -> pusher.trigger("room_" + roomId.toString() + "_channel", RoomEvents.USER_LEFT.toString(), new UserJoinToRoomDto(value, roomId)));
     }
 }
