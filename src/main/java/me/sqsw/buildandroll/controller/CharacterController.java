@@ -18,6 +18,11 @@ public class CharacterController {
         return characterService.getAll();
     }
 
+    @GetMapping("/{id}")
+    public CharacterFullResponse findById(@PathVariable Long id) {
+        return characterService.getCharacter(id);
+    }
+
     @PostMapping("/create")
     public CharacterFullResponse create(@RequestBody CharacterCreateRequest request) {
         return characterService.createCharacter(request);
