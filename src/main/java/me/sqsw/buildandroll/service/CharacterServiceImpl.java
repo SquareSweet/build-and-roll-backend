@@ -75,6 +75,11 @@ public class CharacterServiceImpl implements CharacterService {
         statRepository.saveAll(characterStats);
         characterSheet.setCharacterStats(characterStats);
 
+        List<Spell> spellsList = (List<Spell>) spellRepository.findAllById(character.getSpells());
+        Set<Spell> spells = new HashSet<>(spellsList);
+        characterSheet.setSpells(spells);
+        characterSheet.setCharacterStats(characterStats);
+
         //statRepository.saveAll(character.getStats());
         characterSheet = repository.save(characterSheet);
         //characterSheet = repository.findById(characterSheet.getId()).get();
