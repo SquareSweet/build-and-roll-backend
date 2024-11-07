@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-characters-stats-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: characters_stats
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
+                  name: character_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_stats_characters
+                    references: characters(id)
+              - column:
+                  name: stat_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_stats_stats
+                    references: stats(id)
+              - column:
+                  name: level
+                  type: int
+                  constraints:
+                    nullable: false

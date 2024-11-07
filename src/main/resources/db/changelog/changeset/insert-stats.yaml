@@ -1,0 +1,59 @@
+databaseChangeLog:
+- changeSet:
+    author: SquareSweet
+    changes:
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 1
+        - column:
+            name: name
+            value: Strength
+        tableName: stats
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 2
+        - column:
+            name: name
+            value: Dexterity
+        tableName: stats
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 3
+        - column:
+            name: name
+            value: Intelligence
+        tableName: stats
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 4
+        - column:
+            name: name
+            value: Wisdom
+        tableName: stats
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 5
+        - column:
+            name: name
+            value: Charisma
+        tableName: stats
+    - insert:
+        columns:
+        - column:
+            name: id
+            value: 6
+        - column:
+            name: name
+            value: Constitution
+        tableName: stats
+    id: insert-stats

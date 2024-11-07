@@ -1,0 +1,35 @@
+version: '2.20.3'
+services:
+  db:
+    image: postgres:17.0-alpine
+    container_name: database
+    ports:
+      - "127.0.0.1:6432:5432"
+    environment:
+      - POSTGRES_DB=build-and-roll
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+     default:
+       aliases:
+         - build-and-roll-network
+    volumes:
+      - ./docker/postgres/datadir:/var/lib/postgresql/data
+  app:
+    build: .
+    ports:
+      - "81:8080"
+    networks:
+      default:
+        ipv4_address: 192.168.1.10
+        aliases:
+          - build-and-roll-network
+
+
+networks:
+  default:
+    name: build-and-roll-network
+    external: true
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24

@@ -1,0 +1,464 @@
+databaseChangeLog:
+  - changeSet:
+      author: SquareSweet
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Aarakocra
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": false, "base_ability_modifier": {"Dexterity": 2, "Wisdom": 1}, "lifespan": "30", "size": {"tier": "Medium", "height": [57, "2d2"], "weight": [76, "2d3"]}, "speed": {"standard": 25, "climbing": null, "flying": 50, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Fallen
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Charisma": 2}, "lifespan": "160", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Strength": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Protector
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Charisma": 2}, "lifespan": "160", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Wisdom": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Scourge
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Charisma": 2}, "lifespan": "160", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Constitution": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Bugbear
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Dexterity": 1}, "lifespan": "80", "size": {"tier": "Medium", "height": [72, "2d12"], "weight": [200, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Dragonborn
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Charisma": 1}, "lifespan": "80", "size": {"tier": "Medium", "height": [66, "2d8"], "weight": [175, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Duergar
+              - column:
+                  name: properties
+                  value: '{"source": "SCAG", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "350", "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [48, "2d6"], "weight": [140, "2d4"]}, "ability_modifier": {"Strength": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Hill
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "350", "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [44, "2d4"], "weight": [115, "2d6"]}, "ability_modifier": {"Wisdom": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Mountain
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "350", "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [48, "2d4"], "weight": [130, "2d6"]}, "ability_modifier": {"Strength": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Drow
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [53, "2d6"], "weight": [75, "1d6"]}, "ability_modifier": {"Charisma": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Eladrin
+              - column:
+                  name: properties
+                  value: '{"source": "MTOF", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [54, "2d12"], "weight": [90, "1d4"]}, "ability_modifier": {"Charisma": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: High
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [54, "2d10"], "weight": [90, "1d4"]}, "ability_modifier": {"Intelligence": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Sea
+              - column:
+                  name: properties
+                  value: '{"source": "MTOF", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"swimming": 30}, "size": {"height": [54, "2d8"], "weight": [90, "1d4"]}, "ability_modifier": {"Constitution": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Shadar-Kai
+              - column:
+                  name: properties
+                  value: '{"source": "MTOF", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "size": {"height": [56, "2d8"], "weight": [90, "1d4"]}, "ability_modifier": {"Constitution": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Wood
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "750", "speed": {"standard": 35}, "size": {"height": [56, "2d8"], "weight": [90, "1d4"]}, "ability_modifier": {"Wisdom": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Firbolg
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 1, "Wisdom": 2}, "lifespan": "500", "size": {"tier": "Medium", "height": [74, "2d12"], "weight": [175, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Air
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "120", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Dexterity": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Earth
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "120", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Strength": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Fire
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "120", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Intelligence": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Water
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": true, "base_ability_modifier": {"Constitution": 2}, "lifespan": "120", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"swimming": 30}, "ability_modifier": {"Wisdom": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Githyanki
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {"Intelligence": 1}, "lifespan": "120", "size": {"height": [60, "2d12"], "weight": [100, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Strength": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Githzerai
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {"Intelligence": 1}, "lifespan": "120", "size": {"height": [59, "2d12"], "weight": [90, "1d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Wisdom": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Svirfneblin
+              - column:
+                  name: properties
+                  value: '{"source": "EE", "adventure_league": true, "base_ability_modifier": {"Intelligence": 2}, "lifespan": "200:250", "size": {"tier": "Small", "height": [35, "2d2"], "weight": [82, "1d8"]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Dexterity": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Forest
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Intelligence": 2}, "lifespan": "350:500", "size": {"tier": "Small", "height": [35, "2d4"], "weight": [35, null]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Dexterity": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Rock
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Intelligence": 2}, "lifespan": "350:500", "size": {"tier": "Small", "height": [35, "2d4"], "weight": [35, null]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Constitution": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Goblin
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2, "Constitution": 1}, "lifespan": "60", "size": {"tier": "Small", "height": [41, "2d4"], "weight": [35, null]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Goliath
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Constitution": 1}, "lifespan": "100", "size": {"tier": "Medium", "height": [74, "2d10"], "weight": [200, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Half-Elf
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Charisma": 2, "Choice1": 1, "Choice2": 1}, "lifespan": "180", "size": {"tier": "Medium", "height": [57, "2d8"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant": {"Aquatic Elf Heritage": {"source": "SCAG", "speed": {"swimming": 30}}, "Drow Heritage": {"source": "SCAG"}, "High Elf Heritage": {"source": "SCAG"}, "Wood Elf Heritage": {"source": "SCAG"}}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Half-Orc
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Constitution": 1}, "lifespan": "75", "size": {"tier": "Medium", "height": [58, "2d10"], "weight": [140, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Ghostwise
+              - column:
+                  name: properties
+                  value: '{"source": "SCAG", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "150", "size": {"tier": "Small", "height": [31, "2d4"], "weight": [35, null]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Wisdom": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Lightfoot
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "150", "size": {"tier": "Small", "height": [31, "2d4"], "weight": [35, null]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Charisma": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Stout
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2}, "lifespan": "150", "size": {"tier": "Small", "height": [31, "2d4"], "weight": [35, null]}, "speed": {"standard": 25, "climbing": null, "flying": null, "swimming": null}, "ability_modifier": {"Constitution": 1}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Hobgoblin
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Constitution": 2, "Intelligence": 1}, "lifespan": "100", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Human
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {"Strength": 1, "Dexterity": 1, "Constitution": 1, "Intelligence": 1, "Wisdom": 1, "Charisma": 1}, "lifespan": "100", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant": {"Variant": {"ability_modifier": {"Choice1": 1, "Choice2": 1}}}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Kenku
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2, "Wisdom": 1}, "lifespan": "60", "size": {"tier": "Medium", "height": [52, "2d8"], "weight": [50, "1d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Kobold
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Dexterity": 2}, "lifespan": "120", "size": {"tier": "Small", "height": [25, "2d4"], "weight": [25, null]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Lizardfolk
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Constitution": 2, "Wisdom": 1}, "lifespan": "60", "size": {"tier": "Medium", "height": [57, "2d10"], "weight": [120, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": 30}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Orc
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 2, "Constitution": 1, "Intelligence": 2}, "lifespan": "50", "size": {"tier": "Medium", "height": [52, "2d8"], "weight": [175, "2d6"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Tabaxi
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Dexterity": 2, "Charisma": 1}, "lifespan": "100", "size": {"tier": "Medium", "height": [58, "2d10"], "weight": [90, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Asmodeus
+              - column:
+                  name: properties
+                  value: '{"source": "PHB", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Intelligence": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Baalzebul
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Intelligence": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Dispater
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Dexterity": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Fierna
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Wisdom": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Glasya
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Dexterity": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Levistus
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Constitution": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Mammon
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Intelligence": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Mephistopheles
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Intelligence": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Zariel
+              - column:
+                  name: properties
+                  value: '{"source": "MToF", "adventure_league": true, "base_ability_modifier": {}, "lifespan": "105", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}, "variant1": {"Feral": {"source": "SCAG", "ability_modifier": {"Dexterity": 2, "Intelligence": 1}}}, "variant2": {"Winged": {"source": "SCAG", "adventure_league": false, "speed": {"flying": 30}}}, "ability_modifier": {"Strength": 1, "Charisma": 2}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Tortle
+              - column:
+                  name: properties
+                  value: '{"source": "MToF+", "adventure_league": true, "adventure_league_source": "XGE", "base_ability_modifier": {"Strength": 2, "Wisdom": 1}, "lifespan": 50, "size": {"tier": "Medium", "height": [60, "2d6"], "weight": [400, "2d8"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": null}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Triton
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Strength": 1, "Constitution": 1, "Charisma": 1}, "lifespan": "200", "size": {"tier": "Medium", "height": [54, "2d10"], "weight": [90, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": 30}}'
+            tableName: races
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: Yuan-Ti Pureblood
+              - column:
+                  name: properties
+                  value: '{"source": "VOLO", "adventure_league": true, "base_ability_modifier": {"Intelligence": 1, "Charisma": 2}, "lifespan": "100", "size": {"tier": "Medium", "height": [56, "2d10"], "weight": [110, "2d4"]}, "speed": {"standard": 30, "climbing": null, "flying": null, "swimming": 30}}'
+            tableName: races
+      id: insert-races
