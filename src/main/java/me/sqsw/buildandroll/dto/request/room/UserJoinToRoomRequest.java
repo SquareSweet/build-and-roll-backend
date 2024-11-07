@@ -11,5 +11,6 @@ public class UserJoinToRoomRequest {
 
     private Long userId;
     private Long roomId;
+    private Long characterListId;
 
 }

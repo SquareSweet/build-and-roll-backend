@@ -20,14 +20,14 @@ import java.util.stream.Collectors;
 public class RoomController {
     private final RoomService roomService;
 
-    @PostMapping("/z")
+    @PostMapping("/")
     public ResponseEntity<RoomResponse> create(@RequestBody CreateRoomRequest createRoomRequest) throws Exception {
         return ResponseEntity.ok(new RoomResponse(roomService.create(createRoomRequest.getTitle())));
     }
 
     @PostMapping("/add_user")
     public void addUser(@RequestBody UserJoinToRoomRequest userJoinToRoomRequest) throws Exception {
-        roomService.addUserToRoom(userJoinToRoomRequest.getUserId(), userJoinToRoomRequest.getRoomId());
+        roomService.addUserToRoom(userJoinToRoomRequest);
     }
 
     @PostMapping("/remove_user")
