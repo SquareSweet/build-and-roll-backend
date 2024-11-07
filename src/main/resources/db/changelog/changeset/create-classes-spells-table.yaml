@@ -8,15 +8,15 @@ databaseChangeLog:
             columns:
               - column:
                   name: class_id
-                  type: bigint
+                  type: int
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_user_roles_users
+                    foreignKeyName: fk_classes_spells_classes
                     references: classes(id)
               - column:
                   name: spell_id
-                  type: bigint
+                  type: int
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_user_roles_roles
+                    foreignKeyName: fk_classes_spells_spells
                     references: spells(id)

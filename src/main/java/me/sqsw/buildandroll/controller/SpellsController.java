@@ -24,8 +24,10 @@ public class SpellsController {
     @GetMapping()
     public List<Spell> getFiltered(@RequestParam(required = false) Integer classId,
                                    @RequestParam(required = false) Integer level,
+                                   @RequestParam(required = false) String school,
+                                   @RequestParam(required = false) String search,
                                    @RequestParam(defaultValue = "1") Integer page,
                                    @RequestParam(defaultValue = "10") Integer perPage) {
-        return spellService.getFiltered(classId, level, page - 1, perPage);
+        return spellService.getFiltered(classId, level, school, search, page - 1, perPage);
     }
 }

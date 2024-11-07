@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface SpellService {
     List<Spell> getAll();
-    List<Spell> getFiltered(Integer classId, Integer level, Integer page, Integer perPage);
+    List<Spell> getFiltered(Integer classId, Integer level, String school, String name, Integer page, Integer perPage);
 }

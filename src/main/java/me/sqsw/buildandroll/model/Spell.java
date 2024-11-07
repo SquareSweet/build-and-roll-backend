@@ -24,8 +24,8 @@ public class Spell {
     @ManyToMany
     @JoinTable(
             name = "classes_spells",
-            joinColumns = @JoinColumn(name = "class_id"),
-            inverseJoinColumns = @JoinColumn(name = "spell_id")
+            joinColumns = @JoinColumn(name = "spell_id"),
+            inverseJoinColumns = @JoinColumn(name = "class_id")
     )
     private Set<CharacterClass> characterClass;
     @Enumerated(EnumType.STRING)

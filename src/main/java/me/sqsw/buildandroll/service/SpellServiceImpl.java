@@ -1,6 +1,7 @@
 package me.sqsw.buildandroll.service;
 
 import lombok.RequiredArgsConstructor;
+import me.sqsw.buildandroll.model.School;
 import me.sqsw.buildandroll.model.Spell;
 import me.sqsw.buildandroll.repository.SpellRepository;
 import org.springframework.data.domain.PageRequest;
@@ -19,12 +20,11 @@ public class SpellServiceImpl implements SpellService {
     }
 
     @Override
-    public List<Spell> getFiltered(Integer classId, Integer level, Integer page, Integer perPage) {
-        if (level == null) {
-            return repository.findByCharacterClass_Id(classId, PageRequest.of(page, perPage));
-        } else {
-            return repository.findByCharacterClass_IdAndLevelLessThanEqual(classId, level, PageRequest.of(page, perPage));
-        }
+    public List<Spell> getFiltered(Integer classId, Integer level, String school, String name, Integer page, Integer perPage) {
+        String nameFilter = name == null ? null : "%" + name.toLowerCase() + "%";
+        School schoolFilter = school == null ? null : School.valueOf(school);
+
+        return repository.findFiltered(classId, level, schoolFilter, nameFilter, PageRequest.of(page, perPage));
     }
 
 
