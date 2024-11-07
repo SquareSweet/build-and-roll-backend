@@ -35,6 +35,6 @@ public class CharacterController {
 
     @PostMapping("/addspell")
     public CharacterFullResponse addSpell(@RequestBody SpellAddRequest request) {
-        return characterService.addWeapon(request.getCharacterListId(), request.getSpellId());
+        return characterService.addSpell(request.getCharacterListId(), request.getSpellId());
     }
 }

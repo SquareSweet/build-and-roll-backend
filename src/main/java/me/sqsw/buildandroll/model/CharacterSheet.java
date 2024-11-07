@@ -34,7 +34,7 @@ public class CharacterSheet {
     @ManyToMany
     @JoinTable(
             name = "characters_spells",
-            joinColumns = @JoinColumn(name = "character_id"),
+            joinColumns = @JoinColumn(name = "char_id"),
             inverseJoinColumns = @JoinColumn(name = "spell_id")
     )
     private Set<Spell> spells;

@@ -8,7 +8,9 @@ import me.sqsw.buildandroll.exception.UserNotFoundException;
 import me.sqsw.buildandroll.mapper.CharacterMapper;
 import me.sqsw.buildandroll.model.*;
 import me.sqsw.buildandroll.repository.CharacterRepository;
+import me.sqsw.buildandroll.repository.SpellRepository;
 import me.sqsw.buildandroll.repository.StatRepository;
+import me.sqsw.buildandroll.repository.WeaponRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,8 @@ public class CharacterServiceImpl implements CharacterService {
     private final CharacterRepository repository;
     private final StatRepository statRepository;
     private final CharacterMapper mapper;
+    private final WeaponRepository weaponRepository;
+    private final SpellRepository spellRepository;
 
     @Override
     public List<CharacterShortResponse> getAll() {
@@ -74,11 +78,21 @@ public class CharacterServiceImpl implements CharacterService {
 
     @Override
     public CharacterFullResponse addWeapon(Long characterId, Integer weaponId) {
+        var sheet = repository.findById(characterId).orElseThrow(RuntimeException::new);
+        sheet.getWeapons().add(
+                weaponRepository.findById(weaponId).orElseThrow(RuntimeException::new)
+        );
+        repository.save(sheet);
         return null;
     }
 
     @Override
     public CharacterFullResponse addSpell(Long characterId, Integer spellId) {
+        var sheet = repository.findById(characterId).orElseThrow(RuntimeException::new);
+        sheet.getSpells().add(
+                spellRepository.findById(spellId).orElseThrow(RuntimeException::new)
+        );
+        repository.save(sheet);
         return null;
     }
 

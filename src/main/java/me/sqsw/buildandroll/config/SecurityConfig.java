@@ -40,7 +40,7 @@ public class SecurityConfig {
                                         "api/v1/character/**",
                                         "/actuator/**"
                                 ).permitAll()
-                                .anyRequest().authenticated())
+                                .anyRequest().permitAll())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(httpSecuritySessionManagementConfigurer ->
                         httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
