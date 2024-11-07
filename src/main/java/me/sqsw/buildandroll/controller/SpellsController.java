@@ -1,7 +1,7 @@
 package me.sqsw.buildandroll.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.sqsw.buildandroll.model.Spell;
+import me.sqsw.buildandroll.dto.SpellResponse;
 import me.sqsw.buildandroll.service.SpellService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +17,16 @@ public class SpellsController {
     private final SpellService spellService;
 
     @GetMapping("/all")
-    public List<Spell> getAll() {
-        return spellService.getAll();
+    public List<?> getAll(@RequestParam(required = false) Integer classId) {
+        if (classId == null) {
+            return spellService.getAll();
+        } else {
+            return spellService.getAllForClass(classId);
+        }
     }
 
     @GetMapping()
-    public List<Spell> getFiltered(@RequestParam(required = false) Integer classId,
+    public List<SpellResponse> getFiltered(@RequestParam(required = false) Integer classId,
                                    @RequestParam(required = false) Integer level,
                                    @RequestParam(required = false) String school,
                                    @RequestParam(required = false) String search,

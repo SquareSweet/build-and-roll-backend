@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface SpellRepository extends CrudRepository<Spell, Integer>  {
     List<Spell> findAll();
+    List<Spell> findByCharacterClass_Id(Integer classId);
     @Query("select s from Spell s " +
             "join s.characterClass c where " +
             "(:classId is null or c.id = :classId) " +

@@ -1,6 +1,7 @@
 package me.sqsw.buildandroll.controller;
 
 import lombok.RequiredArgsConstructor;
+import me.sqsw.buildandroll.dto.WeaponResponse;
 import me.sqsw.buildandroll.model.Weapon;
 import me.sqsw.buildandroll.service.WeaponService;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +15,12 @@ public class WeaponsController {
     private final WeaponService weaponService;
 
     @GetMapping("/all")
-    public List<Weapon> getAll() {
+    public List<WeaponResponse> getAll() {
         return weaponService.getAll();
     }
 
     @GetMapping()
-    public List<Weapon> getByType(@RequestParam(required = false) String type,
+    public List<WeaponResponse> getByType(@RequestParam(required = false) String type,
                                   @RequestParam(required = false) String search,
                                   @RequestParam(defaultValue = "1") Integer page,
                                   @RequestParam(defaultValue = "10") Integer perPage) {

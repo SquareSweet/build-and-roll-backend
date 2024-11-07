@@ -1,6 +1,7 @@
 package me.sqsw.buildandroll.controller;
 
 import lombok.RequiredArgsConstructor;
+import me.sqsw.buildandroll.dto.CharacterClassResponse;
 import me.sqsw.buildandroll.model.CharacterClass;
 import me.sqsw.buildandroll.service.ClassService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class ClassesController {
     private final ClassService classService;
 
     @GetMapping("/all")
-    public List<CharacterClass> getAll() {
+    public List<CharacterClassResponse> getAll() {
         return classService.getAll();
     }
 }

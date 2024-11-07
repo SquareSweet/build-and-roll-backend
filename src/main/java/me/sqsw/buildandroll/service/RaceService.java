@@ -1,9 +1,9 @@
 package me.sqsw.buildandroll.service;
 
-import me.sqsw.buildandroll.model.Race;
+import me.sqsw.buildandroll.dto.RaceResponse;
 
 import java.util.List;
 
 public interface RaceService {
-    List<Race> getAll();
+    List<RaceResponse> getAll();
 }
