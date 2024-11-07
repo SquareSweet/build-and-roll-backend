@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-classes-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: classes
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: properties
+                  type: varchar
+                  constraints:
+                    nullable: true
+

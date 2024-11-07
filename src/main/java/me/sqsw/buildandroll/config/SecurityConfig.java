@@ -33,6 +33,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
                                 .requestMatchers("/api/v1/auth/**").permitAll()
+                                .requestMatchers("/api/v1/lib/**").permitAll()
                                 .requestMatchers(
                                         "/actuator/**"
                                 ).permitAll()

@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-spells-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: spells
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: level
+                  type: int
+                  constraints:
+                    nullable: true
+              - column:
+                  name: school
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: properties
+                  type: varchar
+                  constraints:
+                    nullable: true
+

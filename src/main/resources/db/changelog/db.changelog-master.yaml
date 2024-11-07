@@ -7,3 +7,25 @@ databaseChangeLog:
       file: db/changelog/changeset/create-user-roles-table.yaml
   - include:
       file: db/changelog/changeset/insert-default-role.yaml
+  - include:
+      file: db/changelog/changeset/create-races-table.yaml
+  - include:
+      file: db/changelog/changeset/create-classes-table.yaml
+  - include:
+      file: db/changelog/changeset/create-background-table.yaml
+  - include:
+      file: db/changelog/changeset/create-weapons-table.yaml
+  - include:
+      file: db/changelog/changeset/create-spells-table.yaml
+  - include:
+      file: db/changelog/changeset/create-classes-spells-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-weapons.yaml
+  - include:
+      file: db/changelog/changeset/insert-races.yaml
+  - include:
+      file: db/changelog/changeset/insert-spells.yaml
+  - include:
+      file: db/changelog/changeset/insert-classes.yaml
+  - include:
+      file: db/changelog/changeset/insert-classes-spells.yaml
