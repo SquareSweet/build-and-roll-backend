@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-characters-weapons-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: characters_weapons
+            columns:
+              - column:
+                  name: char_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_weapons_character
+                    references: characters(id)
+              - column:
+                  name: weapons_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_weapons_weapons
+                    references: weapons(id)

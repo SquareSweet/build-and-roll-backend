@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-characters-spells-table
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: characters_spells
+            columns:
+              - column:
+                  name: char_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_spells_character
+                    references: characters(id)
+              - column:
+                  name: spell_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_characters_spells_spells
+                    references: spells(id)

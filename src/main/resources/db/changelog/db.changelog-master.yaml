@@ -29,3 +29,15 @@ databaseChangeLog:
       file: db/changelog/changeset/insert-classes.yaml
   - include:
       file: db/changelog/changeset/insert-classes-spells.yaml
+  - include:
+      file: db/changelog/changeset/create-stats-table.yaml
+  - include:
+      file: db/changelog/changeset/create-characters-table.yaml
+  - include:
+      file: db/changelog/changeset/create-characters-stats-table.yaml
+  - include:
+      file: db/changelog/changeset/create-characters-spells-table.yaml
+  - include:
+      file: db/changelog/changeset/create-characters-weapons-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-stats.yaml
