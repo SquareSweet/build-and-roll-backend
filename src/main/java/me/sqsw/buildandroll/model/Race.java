@@ -13,7 +13,7 @@ import java.util.Map;
 @Getter
 @Setter
 @Table(name = "races")
-@EqualsAndHashCode
+@EqualsAndHashCode(exclude = {"properties"})
 public class Race {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

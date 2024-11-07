@@ -7,6 +7,14 @@ databaseChangeLog:
             tableName: characters_stats
             columns:
               - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
                   name: character_id
                   type: bigint
                   autoIncrement: true

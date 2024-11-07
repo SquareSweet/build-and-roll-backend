@@ -10,7 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Table(name = "characters")
-@EqualsAndHashCode(exclude = {"weapons", "spells", "characterStats"})
+@EqualsAndHashCode(exclude = {"weapons", "spells", "characterStats, level"})
 @AllArgsConstructor
 @NoArgsConstructor
 public class CharacterSheet {
@@ -34,7 +34,7 @@ public class CharacterSheet {
     @ManyToMany
     @JoinTable(
             name = "characters_spells",
-            joinColumns = @JoinColumn(name = "char_id"),
+            joinColumns = @JoinColumn(name = "character_id"),
             inverseJoinColumns = @JoinColumn(name = "spell_id")
     )
     private Set<Spell> spells;

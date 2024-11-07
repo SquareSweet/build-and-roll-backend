@@ -1,21 +1,20 @@
 package me.sqsw.buildandroll.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.sqsw.buildandroll.model.CharacterStat;
-
-import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CharacterCreateRequest {
+public class CharacterShortResponse {
+    Long id;
     String name;
-    Integer raceId;
-    Integer classId;
-    Set<StatRequest> stats;
-    Set<Integer> spells;
+    String race;
+    @JsonProperty("class")
+    String characterClass;
+    Integer level;
 }

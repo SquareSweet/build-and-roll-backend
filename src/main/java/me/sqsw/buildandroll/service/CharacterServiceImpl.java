@@ -2,6 +2,8 @@ package me.sqsw.buildandroll.service;
 
 import lombok.RequiredArgsConstructor;
 import me.sqsw.buildandroll.dto.CharacterCreateRequest;
+import me.sqsw.buildandroll.dto.CharacterFullResponse;
+import me.sqsw.buildandroll.dto.CharacterShortResponse;
 import me.sqsw.buildandroll.exception.UserNotFoundException;
 import me.sqsw.buildandroll.mapper.CharacterMapper;
 import me.sqsw.buildandroll.model.*;
@@ -10,7 +12,9 @@ import me.sqsw.buildandroll.repository.StatRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,29 +28,29 @@ public class CharacterServiceImpl implements CharacterService {
     private final CharacterMapper mapper;
 
     @Override
-    public List<CharacterSheet> getAll() {
-        return repository.findAll();
+    public List<CharacterShortResponse> getAll() {
+        return repository.findAll().stream().map(mapper::toShortResponse).collect(Collectors.toList());
     }
 
     @Override
-    public List<CharacterSheet> getOwn() {
+    public List<CharacterShortResponse> getOwn() {
         User user = getUserFromContext();
-        return repository.findByUser_Id(user.getId());
+        return repository.findByUser_Id(user.getId()).stream().map(mapper::toShortResponse).collect(Collectors.toList());
     }
 
     @Override
-    public List<CharacterSheet> getByUser(Long userId) {
-        return repository.findByUser_Id(userId);
+    public List<CharacterShortResponse> getByUser(Long userId) {
+        return repository.findByUser_Id(userId).stream().map(mapper::toShortResponse).collect(Collectors.toList());
     }
 
 
     @Override
-    public CharacterSheet getCharacter(Long characterId) {
-        return repository.findById(characterId).get();
+    public CharacterFullResponse getCharacter(Long characterId) {
+        return mapper.toFullResponse(repository.findById(characterId).get());
     }
 
     @Override
-    public CharacterSheet createCharacter(CharacterCreateRequest character) {
+    public CharacterFullResponse createCharacter(CharacterCreateRequest character) {
         User user = getUserFromContext();
         Race race = raceService.getById(character.getRaceId());
         CharacterClass characterClass = classService.getById(character.getClassId());
@@ -59,23 +63,22 @@ public class CharacterServiceImpl implements CharacterService {
                 null,
                 null);
         characterSheet = repository.save(characterSheet);
-        characterSheet.setCharacterStats(character.getStats());
-        for (CharacterStat stat : character.getStats()) {
-            stat.setCharacterId(characterSheet.getId());
-        }
-        statRepository.saveAll(character.getStats());
-        characterSheet = repository.findById(characterSheet.getId()).get();
-        return characterSheet;
+        CharacterSheet finalCharacterSheet = characterSheet;
+        characterSheet.setCharacterStats(character.getStats().stream()
+                .map(s -> mapper.statFromDto(s, finalCharacterSheet.getId())).collect(Collectors.toSet()));
+        //statRepository.saveAll(character.getStats());
+        characterSheet = repository.save(characterSheet);
+        //characterSheet = repository.findById(characterSheet.getId()).get();
+        return mapper.toFullResponse(characterSheet);
     }
 
     @Override
-    public CharacterSheet addWeapon(Long characterId, Integer weaponId) {
-
+    public CharacterFullResponse addWeapon(Long characterId, Integer weaponId) {
         return null;
     }
 
     @Override
-    public CharacterSheet addSpell(Long characterId, Integer spellId) {
+    public CharacterFullResponse addSpell(Long characterId, Integer spellId) {
         return null;
     }
 
