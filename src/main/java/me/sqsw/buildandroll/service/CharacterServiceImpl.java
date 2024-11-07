@@ -59,6 +59,7 @@ public class CharacterServiceImpl implements CharacterService {
         Race race = raceService.getById(character.getRaceId());
         CharacterClass characterClass = classService.getById(character.getClassId());
 
+
         CharacterSheet characterSheet = mapper.fromCreateToModel(
                 character,
                 user,
@@ -67,9 +68,13 @@ public class CharacterServiceImpl implements CharacterService {
                 null,
                 null);
         characterSheet = repository.save(characterSheet);
-        CharacterSheet finalCharacterSheet = characterSheet;
-        characterSheet.setCharacterStats(character.getStats().stream()
-                .map(s -> mapper.statFromDto(s, finalCharacterSheet.getId())).collect(Collectors.toSet()));
+        CharacterSheet finalCharacterSheet1 = characterSheet;
+        Set<CharacterStat> characterStats = character.getStats().stream()
+                .map(item -> new CharacterStat(finalCharacterSheet1.getId(), item.getId(), item.getLevel()))
+                .collect(Collectors.toSet());
+        statRepository.saveAll(characterStats);
+        characterSheet.setCharacterStats(characterStats);
+
         //statRepository.saveAll(character.getStats());
         characterSheet = repository.save(characterSheet);
         //characterSheet = repository.findById(characterSheet.getId()).get();

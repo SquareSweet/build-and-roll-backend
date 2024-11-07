@@ -20,4 +20,10 @@ public class CharacterStat {
     @Column(name = "stat_id")
     private Integer statId;
     private Integer level;
+
+    public CharacterStat(Long characterId, Integer statId, Integer level) {
+        this.characterId = characterId;
+        this.statId = statId;
+        this.level = level;
+    }
 }
