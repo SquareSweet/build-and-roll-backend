@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import me.sqsw.buildandroll.contracts.RoomService;
 import me.sqsw.buildandroll.dto.UserDto;
 import me.sqsw.buildandroll.dto.request.room.UpdateUsersDto;
+import me.sqsw.buildandroll.dto.request.room.UserJoinToRoomRequest;
 import me.sqsw.buildandroll.dto.response.RoomResponse;
 import me.sqsw.buildandroll.dto.room.UserJoinToRoomDto;
 import me.sqsw.buildandroll.enums.RoomEvents;
@@ -59,9 +60,13 @@ public class RoomServiceImpl implements RoomService {
         }
     }
 
-    public void addUserToRoom(Long userId, Long roomId) throws Exception {
-        Optional<User> user = userService.getById(userId);
-        user.ifPresent(value -> pusher.trigger("room_" + roomId.toString() + "_channel", RoomEvents.USER_JOINED.toString(), new UserJoinToRoomDto(value, roomId)));
+    public void addUserToRoom(UserJoinToRoomRequest userJoinToRoomRequest) throws Exception {
+        Optional<User> user = userService.getById(userJoinToRoomRequest.getUserId());
+        if(user.isPresent()){
+            UserJoinToRoomDto userJoinToRoomDto = new UserJoinToRoomDto(user.get(), userJoinToRoomRequest.getRoomId());
+            userJoinToRoomDto.setCharacterListId(userJoinToRoomRequest.getCharacterListId());
+            pusher.trigger("room_" + userJoinToRoomRequest.getRoomId().toString() + "_channel", RoomEvents.USER_JOINED.toString(), userJoinToRoomDto);
+        }
     }
 
     public void sendAllUsersInRoom(Long roomId, UpdateUsersDto users) {
