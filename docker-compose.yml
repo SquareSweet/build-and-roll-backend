@@ -23,6 +23,7 @@ services:
       default:
         aliases:
           - build-and-roll-network
+    restart: on-failure
 
 
 networks:
