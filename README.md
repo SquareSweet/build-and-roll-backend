@@ -7,9 +7,10 @@
 mvn clean package
 ```
 
+
 Докер-контейнер с базой данных запускается с помошью команды:
-```consioe
-docker-compose up
+```console
+make deploy
 ```
 
 Сервер будет доступен по адресу: http://localhost:8080.
