@@ -21,7 +21,6 @@ services:
       - "81:8080"
     networks:
       default:
-        ipv4_address: 192.168.1.10
         aliases:
           - build-and-roll-network
 
@@ -30,6 +29,3 @@ networks:
   default:
     name: build-and-roll-network
     external: true
-    ipam:
-      config:
-        - subnet: 192.168.1.0/24
