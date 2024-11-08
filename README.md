@@ -4,7 +4,7 @@
 ## Сборка и запуск
 Для сборки приложения необходимо ввести команду:
 ```console
-mvn clean package
+mvn package -Dmaven.test.skip
 ```
 
 
